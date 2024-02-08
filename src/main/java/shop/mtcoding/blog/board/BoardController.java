@@ -2,11 +2,13 @@ package shop.mtcoding.blog.board;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.query.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import shop.mtcoding.blog._core.Constant;
 import shop.mtcoding.blog._core.PagingUtil;
 
 import java.util.List;
@@ -31,9 +33,16 @@ public class BoardController {
 
         boolean first = PagingUtil.isFirst(currentPage);
         boolean last = PagingUtil.isLast(currentPage, boardRepository.count());
+        int[] numberPage = new int[(boardRepository.count() / Constant.PAGING_COUNT) + 1];
+
+
+        for (int i = 0; i < numberPage.length; i++) {
+            numberPage[i] = i;
+        }
 
         System.out.println(boardRepository.count());
 
+        request.setAttribute("numberPage", numberPage);
         request.setAttribute("first", first);
         request.setAttribute("last", last);
 

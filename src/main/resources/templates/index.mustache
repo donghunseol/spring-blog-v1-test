@@ -38,6 +38,11 @@
         <li class="page-item {{#first}}disabled{{/first}}">
             <a class="page-link" href="?page={{prevPage}}">Previous</a>
         </li>
+        {{#numberPage}}
+            <li class="page-item">
+                <a class="page-link" href="?page={{.}}">{{.}}</a>
+            </li>
+        {{/numberPage}}
         <li class="page-item {{#last}}disabled{{/last}}">
             <a class="page-link" href="?page={{nextPage}}">Next</a>
         </li>

@@ -12,4 +12,13 @@ insert into board_tb (title, content, author, created_at)
 values ('제목6', '내용6', '유관순', now());
 insert into board_tb (title, content, author, created_at)
 values ('제목7', '내용7', '허준', now());
-
+insert into board_tb (title, content, author, created_at)
+values ('제목8', '내용8', '권율', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목9', '내용9', '강감찬', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목10', '내용10', '고주몽', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목11', '내용11', '단군', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목12', '내용12', '박혁거세', now());
