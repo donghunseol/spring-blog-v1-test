@@ -21,22 +21,22 @@ values ('제목10', '내용10', '고주몽', now());
 insert into board_tb (title, content, author, created_at)
 values ('제목11', '내용11', '단군', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목12', '내용12', '박혁거세', now());
+values ('제목12', '내용12', '설시민', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목13', '내용13', '박혁거세', now());
+values ('제목13', '내용13', '전시민', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목14', '내용14', '박혁거세', now());
+values ('제목14', '내용14', '박시민', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목15', '내용15', '박혁거세', now());
+values ('제목15', '내용15', '세종', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목16', '내용16', '박혁거세', now());
+values ('제목16', '내용16', '정종', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목17', '내용17', '박혁거세', now());
+values ('제목17', '내용17', '태종', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목18', '내용18', '박혁거세', now());
+values ('제목18', '내용18', '의자왕', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목19', '내용19', '박혁거세', now());
+values ('제목19', '내용19', '김시민', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목20', '내용20', '박혁거세', now());
+values ('제목20', '내용20', '단종', now());
 insert into board_tb (title, content, author, created_at)
-values ('제목21', '내용21', '박혁거세', now());
+values ('제목21', '내용21', '문종', now());

@@ -20,8 +20,15 @@ public class BoardController {
     private final BoardRepository boardRepository;
 
     @GetMapping("/")
-    public String index(HttpServletRequest request, @RequestParam(defaultValue = "0") int page) {
-        List<Board> boardList = boardRepository.findAll(page);
+    public String index(HttpServletRequest request, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "") String keyword) {
+        List<Board> boardList;
+
+        if (keyword.isBlank()) {
+            boardList = boardRepository.findAll(page);
+        } else {
+            boardList = boardRepository.findAll(page, keyword);
+        }
+
         request.setAttribute("boardList", boardList);
 
         int currentPage = page;

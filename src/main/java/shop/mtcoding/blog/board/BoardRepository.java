@@ -26,6 +26,16 @@ public class BoardRepository {
         return query.getResultList();
     }
 
+    public List<Board> findAll(int page, String keyword) {
+        int value = page * Constant.PAGING_COUNT;
+        Query query = em.createNativeQuery("select * from board_tb where title like ? order by id desc limit ?, ?", Board.class);
+        query.setParameter(1, "%" + keyword + "%");
+        query.setParameter(2, value);
+        query.setParameter(3, Constant.PAGING_COUNT);
+
+        return query.getResultList();
+    }
+
     @Transactional
     public void save(BoardRequest.SaveDTO requestDTO) {
         Query query = em.createNativeQuery("insert into board_tb (author, title, content, created_at) values (?, ?, ?, now())", Board.class);
