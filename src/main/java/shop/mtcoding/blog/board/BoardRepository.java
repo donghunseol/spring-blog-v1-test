@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
+import shop.mtcoding.blog._core.Constant;
 
 import java.util.List;
 
@@ -16,8 +17,12 @@ public class BoardRepository {
         this.em = em;
     }
 
-    public List<Board> findAll() {
-        Query query = em.createNativeQuery("select * from board_tb order by id desc", Board.class);
+    public List<Board> findAll(int page) {
+        int value = page * Constant.PAGING_COUNT;
+        Query query = em.createNativeQuery("select * from board_tb order by id desc limit ?, ?", Board.class);
+        query.setParameter(1, value);
+        query.setParameter(2, Constant.PAGING_COUNT);
+
         return query.getResultList();
     }
 
@@ -51,5 +56,11 @@ public class BoardRepository {
         query.setParameter(3, requestDTO.getAuthor());
         query.setParameter(4, id);
         query.executeUpdate();
+    }
+
+    public int count() {
+        Query query = em.createNativeQuery("select count(*) from board_tb");
+        Number count = (Number) query.getSingleResult();
+        return count.intValue();
     }
 }
