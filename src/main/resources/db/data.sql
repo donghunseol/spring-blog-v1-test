@@ -22,3 +22,21 @@ insert into board_tb (title, content, author, created_at)
 values ('제목11', '내용11', '단군', now());
 insert into board_tb (title, content, author, created_at)
 values ('제목12', '내용12', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목13', '내용13', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목14', '내용14', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목15', '내용15', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목16', '내용16', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목17', '내용17', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목18', '내용18', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목19', '내용19', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목20', '내용20', '박혁거세', now());
+insert into board_tb (title, content, author, created_at)
+values ('제목21', '내용21', '박혁거세', now());

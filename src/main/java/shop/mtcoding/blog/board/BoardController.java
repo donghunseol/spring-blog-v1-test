@@ -33,8 +33,14 @@ public class BoardController {
 
         boolean first = PagingUtil.isFirst(currentPage);
         boolean last = PagingUtil.isLast(currentPage, boardRepository.count());
-        int[] numberPage = new int[(boardRepository.count() / Constant.PAGING_COUNT) + 1];
 
+        int[] numberPage;
+
+        if (boardRepository.count() % Constant.PAGING_COUNT == 0) {
+            numberPage = new int[(boardRepository.count() / Constant.PAGING_COUNT)];
+        } else {
+            numberPage = new int[(boardRepository.count() / Constant.PAGING_COUNT) + 1];
+        }
 
         for (int i = 0; i < numberPage.length; i++) {
             numberPage[i] = i;
